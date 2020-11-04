@@ -181,8 +181,7 @@ void testMergeSort()
         input1.push_back(arr[i]);
     }
 
-    cout<<"Input as: ";
-    ShowdArray(arr, MAX_SZIE);
+    ShowdArray(arr, MAX_SZIE, "Input as:\n" );
     cout<<endl;
 
     //std::vector<int> result = mergeSort(arr, MAX_SZIE);
@@ -192,8 +191,7 @@ void testMergeSort()
 
     bool flas = true;
 
-    cout<<"OutPut by merge sort  : ";
-    ShowdArray(arr, MAX_SZIE);
+    ShowdArray(arr, MAX_SZIE, "OutPut by merge sort  : \n");
 
     cout<<"OutPut by build in sort: ";
     ShowdArray(input1, MAX_SZIE);

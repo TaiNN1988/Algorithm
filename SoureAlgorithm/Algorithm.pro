@@ -3,6 +3,7 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 LIBS +=\-lboost_system\
+#CONFIG += c++17
 
 SOURCES += \
     Lesson1/MergeSort.cpp \
@@ -10,6 +11,7 @@ SOURCES += \
     Lesson2/InversionCount.cpp \
     Lesson2/MutipleMatrix.cpp \
     Lesson2/closerpair.cpp \
+    Lesson3/quicksort.cpp \
     Main.cpp \
     utilities.cpp
 
@@ -19,4 +21,5 @@ HEADERS += \
     Lesson2/InversionCount.h \ \
     Lesson2/MutipleMatrix.h \
     Lesson2/closerpair.h \
+    Lesson3/quicksort.h \
     utilities.h

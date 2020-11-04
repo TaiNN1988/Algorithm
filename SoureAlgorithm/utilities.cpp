@@ -29,8 +29,9 @@ vector<int> readDataFromFile(string path)
 
     return result;
 }
-void ShowdArray(int*arr, int size)
+void ShowdArray(int*arr, int size, string msg)
 {
+    cout<<msg;
     for(int i = 0; i < size && i <100; i++)
     {
         cout<<arr[i]<<" ";
@@ -101,3 +102,4 @@ vector<vector<int>> randomMatrix(int row, int col)
     }
     return result;
 }
+

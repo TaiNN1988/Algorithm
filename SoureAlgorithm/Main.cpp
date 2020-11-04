@@ -5,6 +5,8 @@
 #include "Lesson2/MutipleMatrix.h"
 #include "Lesson2/closerpair.h"
 #include "Lesson1/MutipleInteger.h"
+#include "Lesson3/quicksort.h"
+#include <random>
 
 void testLesson1();
 void testLesson2();
@@ -12,8 +14,9 @@ void testLesson2();
 
 int main()
 {
-    testClosestPair();
+    //testClosestPair();
 
+    testQuickSort();
     return 0;
 }
 
