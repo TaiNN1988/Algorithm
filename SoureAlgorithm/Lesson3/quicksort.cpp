@@ -127,7 +127,7 @@ int partitionRandom(T1* arr, int l, int r)
 
     swapValue(arr[l], arr[pivotIdxRandom]);
 
-    return partition(arr, l, r);
+    return partitionFirstPivot(arr, l, r);
 }
 
 template<typename T2>

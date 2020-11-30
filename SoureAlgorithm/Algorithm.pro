@@ -12,6 +12,7 @@ SOURCES += \
     Lesson2/MutipleMatrix.cpp \
     Lesson2/closerpair.cpp \
     Lesson3/quicksort.cpp \
+    Lesson4/RandomizedSelection.cpp \
     Main.cpp \
     utilities.cpp
 
@@ -22,4 +23,5 @@ HEADERS += \
     Lesson2/MutipleMatrix.h \
     Lesson2/closerpair.h \
     Lesson3/quicksort.h \
+    Lesson4/RandomizedSelection.h \
     utilities.h
