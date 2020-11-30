@@ -9,15 +9,14 @@
 //   Created By: Tai Nguyen(taingocnguyen1988@gmail.com)
 ////////////////////////////////////////////////////////////////////////////
 
-#include "Lesson2/MutipleMatrix.h"
+#include "../Lesson2/MutipleMatrix.h"
 #include "utilities.h"
 
-typedef struct
+typedef struct MatrixTest
 {
     vector<vector<int>> matrix1;
     vector<vector<int>> matrix2;
     vector<vector<int>> expectedMatrix;
-
 }MatrixTest;
 
 
@@ -214,63 +213,57 @@ std::vector<std::vector<int>> strassenMutipleMatrix2(std::vector<std::vector<int
 
 void testMutipleMatrix()
 {
-    MatrixTest datatest[] = {
-        {{
+   /* MatrixTest datatest[] = {
+        {
+            {
             {1, 2, 3},
             {4, 5, 6}
+            },
+
+           {
+            {7, 8},
+            {9, 10},
+            {11, 12}
+           },
+
+           {
+            {58, 64},
+            {139, 154}
+           }
         },
 
-       {
-           {7, 8},
-           {9, 10},
-           {11, 12}
-       },
-
-       {
-           {58, 64},
-           {139, 154}
-       }},
-
-        {{
+        {
+            {
             {5, 2, 6, 1},
             {0, 6, 2, 0},
             {3, 8, 1, 4},
             {1, 8, 5, 6},
-        },
+            },
 
-       {
+           {
             {7, 5, 8, 0},
             {1, 8, 2, 6},
             {9, 4, 3, 8},
             {5, 3, 7, 9},
-       },
+           },
 
-       {
-             {96, 68, 69, 69},
-             {24, 56, 18, 52},
-             {58, 95, 71, 92},
-             {90, 107, 81, 142},
+           {
+            {96, 68, 69, 69},
+            {24, 56, 18, 52},
+            {58, 95, 71, 92},
+            {90, 107, 81, 142},
 
-       }},
-    };
+           }
+        }
+    };*/
 
-//    vector<vector<int>> matrix1 = datatest[1].matrix1;
-//    vector<vector<int>> matrix2 = datatest[1].matrix2;
-//    vector<vector<int>> expectedMatrix = datatest[1].expectedMatrix;
-    int size = 8;
-    int in1[512][HAFT_SIZE], in2[512][HAFT_SIZE], outMatrix[512][HAFT_SIZE];
+
+
+    int size = 64;
+
 
     vector<vector<int>> matrix1 = randomMatrix(size, size);
     vector<vector<int>> matrix2 = randomMatrix(size, size);
-
-    for(int r = 0; r < size; r++)
-    {
-        for(int c = 0; c < size; c++)
-        {
-            in1[r][c] = matrix1[r][c];
-            in2[r][c] = matrix2[r][c];
-        }
-    }
 
     cout<<"Show matrix 1"<<endl;
     showMatrix(matrix1);
@@ -289,23 +282,6 @@ void testMutipleMatrix()
     cout<<"Show expectation matrix"<<endl;
     showMatrix(expectedMatrix);
 
-//    auto started2 = chrono::high_resolution_clock::now();
-//   vector<vector<int>> actualMatrix = strassenMutipleMatrix1(matrix1, Position(0,0), matrix2, Position(0,0), matrix1.size());
-//    auto done2 = chrono::high_resolution_clock::now();
-//    double time2 = chrono::duration_cast<std::chrono::milliseconds>(done2-started2).count();
-//     cout <<"strassenMutipleMatrix1 time(seconds): "<<time2 <<endl;
-//     cout<<"Show actual matrix"<<endl;
-//     showMatrix(actualMatrix);
-
-    auto started2 = chrono::high_resolution_clock::now();
-    //strassenMutipleMatrix3((int**)in1, Position(0,0), (int**)in2, Position(0,0), (int**)outMatrix, size);
-    auto done2 = chrono::high_resolution_clock::now();
-    double time2 = chrono::duration_cast<std::chrono::milliseconds>(done2-started2).count();
-     cout <<"strassenMutipleMatrix3 time(seconds): "<<time2 <<endl;
-     cout<<"Show actual matrix"<<endl;
-     showMatrix((int**)outMatrix, size, size);
-
-
      auto started3 = chrono::high_resolution_clock::now();
     vector<vector<int>> actualMatrix2 = strassenMutipleMatrix2(matrix1, Position(0,0), matrix2, Position(0,0), matrix1.size());
      auto done3 = chrono::high_resolution_clock::now();
@@ -320,7 +296,7 @@ void testMutipleMatrix()
     {
         for(int j = 0; j < expectedMatrix[0].size(); j++)
         {
-            if(outMatrix[i][j] != expectedMatrix[i][j] || actualMatrix2[i][j] != expectedMatrix[i][j] )
+            if(actualMatrix2[i][j] != expectedMatrix[i][j] )
             {
                 flag = false;
                 break;

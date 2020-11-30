@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include "utilities.h"
-#include "Lesson1/MutipleInteger.h"
+#include "../Lesson1/MutipleInteger.h"
 
 using namespace std;
 

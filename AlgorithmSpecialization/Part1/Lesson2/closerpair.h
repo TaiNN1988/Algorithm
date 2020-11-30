@@ -1,7 +1,7 @@
 #ifndef CLOSERPAIR_H
 #define CLOSERPAIR_H
 #include <vector>
-#include <math.h>
+#include <cmath>
 #include <algorithm>
 
 typedef struct Point

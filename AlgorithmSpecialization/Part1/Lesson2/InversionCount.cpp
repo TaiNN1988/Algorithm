@@ -84,7 +84,7 @@ unsigned int countSplitInv(vector<int>& inArr, vector<int>& subLeft, vector<int>
 
 void testInversionCount()
 {
-    vector<int> input1 = readDataFromFile("/home/tai/OnlineLearning/AlgorithmsSpecialization/SoureAlgorithm/DataTest/IntegerArray.txt");
+    vector<int> input1 = readDataFromFile("DataTest//IntegerArray.txt");
     vector<int> input2(input1.begin(), input1.end());
 
     int size = input1.size();

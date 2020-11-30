@@ -176,11 +176,6 @@ void quickSortFirtPivot(T2* arr, int l, int r)
 template<typename T2>
 void quickSortFinalPivot(T2* arr, int l, int r)
 {
-//    if(r -l <= 1)
-//    {
-//        return;
-//    }
-
     if( l >= r)
     {
         return;
@@ -234,8 +229,7 @@ void testQuickSort()
 //    ShowdArray(arr, n, "Ouput array\n");
     try {
 
-
-    vector<int> arr1 = readDataFromFile("/home/tai/OnlineLearning/AlgorithmsSpecialization/Algorithm/SoureAlgorithm/DataTest/QuickSort.txt");
+    vector<int> arr1 = readDataFromFile("DataTest//QuickSort.txt");
     vector<int> arr2(arr1.begin(), arr1.end());
     int size = arr1.size();
     countCompare = 0;

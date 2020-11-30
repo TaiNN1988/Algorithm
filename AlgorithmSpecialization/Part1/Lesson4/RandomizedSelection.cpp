@@ -1,4 +1,4 @@
-#include "Lesson4/RandomizedSelection.h"
+#include "../Lesson4/RandomizedSelection.h"
 #include "utilities.h"
 #include <random>
 #include <exception>
@@ -55,8 +55,6 @@ T2 RandomizedSelection(T2* arr, int l, int r, int idxOrderStatistic)
     int pivotIdx = partitionRandom(arr, l, r);
     int k = pivotIdx - l + 1;
     int k1 = pivotIdx + 1;
-    std::cout<<"pivotIdx = "<<pivotIdx<<"k = " <<k<<endl;
-    cout<<"K1= "<<k1<<endl;
 
     if(idxOrderStatistic == k)
     {

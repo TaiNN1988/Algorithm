@@ -72,6 +72,19 @@ void showMatrix(int** matrix, int Row, int Col)
     }
 }
 
+void showMatrix(int* matrix, int Row, int Col)
+{
+    for (int i = 0; i < Row && i < 10; i++)
+    {
+        for (int j = 0; j < Col && j < 10; j++)
+        {
+            int idx = j + i * Col;
+            cout << matrix[idx] << " ";
+        }
+        cout << endl;
+    }
+}
+
 
 int randValue(int range)
 {

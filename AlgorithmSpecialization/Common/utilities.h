@@ -1,8 +1,6 @@
 #ifndef UTILITIES_H
 #define UTILITIES_H
 
-#include "Lesson2/closerpair.h"
-
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -11,6 +9,9 @@
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
+#include <cmath>
+
+#include "../Part1/Lesson2/closerpair.h"
 
 using namespace std;
 
@@ -23,6 +24,7 @@ void ShowdArray(int*arr, int size, string msg);
 void ShowdArray(vector<int>arr, int size);
 void showMatrix(vector<vector<int>> matrix);
 void showMatrix(int** matrix, int Row, int Col);
+void showMatrix(int* matrix, int Row, int Col);
 
 int randValue(int range);
 bool checkvalue(int* arr, int size, int value);
